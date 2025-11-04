@@ -1,0 +1,9 @@
+# pesde packages
+luau_packages
+lune_packages
+
+# rojo sourcemap
+sourcemap.json
+
+# dist
+dist

@@ -1,0 +1,34 @@
+name = "word30210/priority_store"
+version = "0.1.0"
+description = "This is a library that helps process values according to priority."
+authors = ["word30210"]
+repository = "https://github.com/Word30210/PriorityStore"
+license = "MIT"
+
+includes = [
+    "src/**",
+    ".luaurc",
+    "pesde.toml",
+    "README.md",
+    "LICENSE"
+]
+
+[target]
+environment = "lune"
+lib = "src/lib.luau"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies]
+frktest = { name = "itsfrank/frktest", version = "^0.0.2" }
+multitarget = { name = "jiwonz/multitarget", version = "^0.4.0-rc.30" }
+pathfs = { name = "jiwonz/pathfs", version = "=0.6.0-rc.8" }
+
+[dependencies]
+
+[overrides]
+"multitarget>pathfs" = "pathfs"
+
+[scripts]
+build = "scripts/build.luau"
